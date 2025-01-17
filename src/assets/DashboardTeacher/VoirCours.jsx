@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Cours.module.css';
+import styles from './VoirCours.module.css';
 import image from './Group 237658.png';
 import { useParams, useNavigate } from "react-router-dom";
 import { ChapterItem } from './ChapterItem';
@@ -7,12 +7,12 @@ const chapters = [
     {
         iconSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/a2307a5b8bca501148f968bf86cdb1a220a3f8cf1943bcabfd64797f34c7611f?placeholderIfAbsent=true&apiKey=875c657f39b24f02b57f3f224a6dff5b",
 
-        title: "Chapitre1 : nature",
+        title: "Quiz1",
         alt: "Nature chapter icon"
     },
     {
         iconSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/d9c064ba1f67965c1294c8336c9ab20c15e1b4efa39947d1875a9a329ff683ac?placeholderIfAbsent=true&apiKey=875c657f39b24f02b57f3f224a6dff5b",
-        title: "Chapitre2 : couleur",
+        title: "Quiz2",
         alt: "Color chapter icon"
     }
 ];
@@ -54,21 +54,30 @@ function Classes() {
                             />
                         </div>
                     </div>
-                    <h1 className={styles.title}>Cours</h1>
-                    {chapters.map((chapter, index) => (
-                        <ChapterItem
-                            key={index}
-                            iconSrc={chapter.iconSrc}
-                            title={chapter.title}
-                            alt={chapter.alt}
-                        />
-                    ))}
-                    <button className={styles.addQuizButton} aria-label="Add Quiz" onClick={() => navigate("/VoirCoursTeacher")}>
-                        Voir Chap2
-                    </button>
+                    <div className={styles.main2}>
+                        <h1 className={styles.title}>Chapitre 2: couleur</h1>
+                        <button className={styles.addQuizButton} aria-label="Add Quiz" onClick={() => navigate("/quiz-teacher")}>
+                            Ajouter Quize
+                        </button>
+                        {chapters.map((chapter, index) => (
+                            <ChapterItem
+                                key={index}
+                                iconSrc={chapter.iconSrc}
+                                title={chapter.title}
+                                alt={chapter.alt}
+                            />
+                        ))}
+
+                        <button className={styles.addQuizButton} aria-label="Add Quiz" onClick={() => navigate("/quiz-teacher")}>
+                            Modifier quiz
+                        </button> <br />
+                        <button className={styles.addQuizButton} aria-label="Add Quiz" >
+                            Supprimer quiz
+                        </button>
+                    </div>
                 </main>
             </div>
-        </div >
+        </div>
     );
 }
 

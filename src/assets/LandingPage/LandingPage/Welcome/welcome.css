@@ -1,35 +1,18 @@
-.main {
-  margin-top: -176px;
-}
-
-.div4 {
-  align-self: end;
-  display: flex;
-  margin-top: 94px;
-  width: 100%;
-  max-width: 1411px;
-  flex-direction: column;
-  z-index: 2;
-}
-
-
-
 .div6 {
   gap: 20px;
   display: flex;
   z-index: 2;
 }
 
-
 .column {
   z-index: 2;
   display: flex;
   flex-direction: column;
   line-height: normal;
-  width: 50%;
+  width: 90%;
   margin-left: 0px;
+  margin-top: 120px;
 }
-
 
 .div7 {
   z-index: 2;
@@ -37,25 +20,21 @@
   flex-direction: column;
   align-self: stretch;
   margin: auto 0;
+  width: 90%;
 }
 
-
 .welcomeToSciKids {
-  z-index: 2;
-
-  -webkit-text-stroke: 100% white;
-  /* Stroke size and color */
-  font-size: 36px;
-  /* Adjust font size as needed */
-
-  color: white;
-  letter-spacing: 2.88Px;
-  margin-right: 866 px;
-  width: 561;
-  margin-left: 101px;
-
-  font: 1000 96px Righteous;
-
+  color: rgba(255, 255, 255, 1);
+  /* Couleur blanche */
+  letter-spacing: 2.88px;
+  padding: -24px 0 0;
+  font-size: 320px;
+  /* Augmentation de la taille de la police */
+  font-weight: bold;
+  /* Mise en gras */
+  font-family: Righteous, sans-serif;
+  /* Police existante */
+  margin-left: 100px;
 }
 
 
@@ -84,26 +63,24 @@
 
 }
 
-
 .column2 {
   display: flex;
   flex-direction: column;
   line-height: normal;
-  width: 50%;
+  max-width: 50%;
   z-index: 2;
   margin-left: 20px;
+  margin-top: 120px;
 }
 
-
-
 .dooby {
-  aspect-ratio: 0.87;
-  object-fit: contain;
-  object-position: right;
-  width: 90%;
   z-index: 2;
   flex-grow: 1;
-
+  aspect-ratio: 0.87;
+  /* Garde les proportions */
+  object-fit: contain;
+  object-position: right;
+  margin-left: 90px;
 }
 
 
@@ -137,9 +114,8 @@
   color: #5AD78F;
   font-weight: 500;
   padding: 14px 30px;
-  margin-right: 1170 px;
   width: 244 px;
-  margin-left: 101px;
+  margin-left: 80px;
 }
 
 .join:hover {
@@ -172,9 +148,8 @@
   color: #FFF;
   font-weight: 500;
   padding: 14px 30px;
-  margin-right: 1170 px;
   width: 244 px;
-  margin-left: 101px;
+  margin-left: 1px;
 }
 
 .partner:hover {
@@ -186,52 +161,158 @@
 }
 
 .buttons-container {
-  z-index: 2;
+  z-index: 1;
   display: flex;
   justify-content: center;
   /* Centre les boutons horizontalement */
   align-items: center;
   /* Centre les boutons verticalement */
-  gap: 20px;
+  gap: 25px;
   /* Espacement horizontal entre les boutons */
   margin-top: 20px;
 }
 
 .page-container {
   z-index: 2;
-  min-height: 100vh;
-  margin-top: -150px;
+  margin-top: -10px;
   /* Assurez-vous que la hauteur est au moins égale à l'écran */
 
 }
 
 .container {
   position: relative;
-  margin-top: 128px;
   width: 100%;
-  height: 100vh;
-  /* ou la hauteur que tu préfères */
+  min-height: 900px;
+  /* Définit une hauteur minimale explicite */
+  background-image: url('C:\\Users\\chaym\\OneDrive\\Bureau\\Platform VERSION0\\Version_0\\src\\assets\\LandingPage\\LandingPage\\Welcome\\frontground.png');
+  background-repeat: no-repeat;
+  /* Empêche la répétition de l'image */
+  background-size: 100% auto;
+  /* Assure que la largeur est couverte et l'image conserve ses proportions */
+  background-position: center;
+  /* Centre l'image dans le conteneur */
 }
 
-.background-photo {
-  background-image: url('background.png');
-  background-position: center bottom;
-  /* Positionne l'image en bas */
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: -15px;
+
+/* ---- Responsivité pour les téléphones (jusqu'à 768px) ---- */
+@media (max-width: 768px) {
+  .main {
+    margin-top: 0;
+    padding: 10px;
+  }
+
+  .div4,
+  .div6,
+  .div8,
+  .buttons-container {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .column,
+  .column2 {
+    width: 100%;
+    /* Utiliser toute la largeur */
+    margin: 0 auto;
+  }
+
+  .welcomeToSciKids {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  .loremIpsumDolorSitAmetConsectetuerAdipiscingElitSedDoEiusmodTemporIncididuntUtLaboreEtDoloreMag {
+    font-size: 16px;
+    text-align: center;
+    width: auto;
+    margin: 10px auto;
+  }
+
+  .join,
+  .partner {
+    font-size: 16px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .dooby {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
-.foreground-photo {
-  position: absolute;
-  background-size: cover;
-  bottom: 0;
-  /* Place l'image en avant-plan au bas */
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: auto;
+/* ---- Responsivité pour les tablettes (769px à 1024px) ---- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main {
+    padding: 20px;
+  }
+
+  .div6 {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .column,
+  .column2 {
+    width: 45%;
+    /* Moitié de la largeur */
+  }
+
+  .welcomeToSciKids {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .loremIpsumDolorSitAmetConsectetuerAdipiscingElitSedDoEiusmodTemporIncididuntUtLaboreEtDoloreMag {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  .dooby {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .join,
+  .partner {
+    font-size: 18px;
+    width: auto;
+  }
+}
+
+/* ---- Responsivité pour les grands écrans (plus de 1024px) ---- */
+@media (min-width: 1025px) {
+  .main {
+    margin-top: -176px;
+  }
+
+  .div6 {
+    flex-direction: row;
+  }
+
+  .column,
+  .column2 {
+    width: 50%;
+    /* Par défaut, moitié de la largeur */
+  }
+
+  .welcomeToSciKids {
+    font-size: 76px;
+    text-align: left;
+  }
+
+  .loremIpsumDolorSitAmetConsectetuerAdipiscingElitSedDoEiusmodTemporIncididuntUtLaboreEtDoloreMag {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .dooby {
+    width: 80%;
+    text-align: right;
+  }
 }

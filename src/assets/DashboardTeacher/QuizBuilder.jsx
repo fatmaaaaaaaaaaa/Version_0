@@ -54,7 +54,6 @@ const QuizBuilder = () => {
     };
 
     return (
-
         <div style={{ padding: "20px", fontFamily: "Arial" }}>
             <div style={{ marginBottom: "20px" }}>
                 <label>
@@ -128,18 +127,21 @@ const QuizBuilder = () => {
                             />
                         </div>
                     ))}
-                    <div style={{ marginTop: "10px" }}>
+                    <div
+                        style={{
+                            marginTop: "10px",
+                            display: "flex",
+                            flexWrap: "wrap",
+                            gap: "10px",
+                        }}
+                    >
                         <button onClick={() => addOption(qIndex, "radio")}>Add Radio</button>
-                        <button
-                            onClick={() => addOption(qIndex, "checkbox")}
-                            style={{ marginLeft: "10px" }}
-                        >
+                        <button onClick={() => addOption(qIndex, "checkbox")}>
                             Add Checkbox
                         </button>
                         <button
                             onClick={() => removeQuestion(qIndex)}
                             style={{
-                                marginLeft: "10px",
                                 background: "red",
                                 color: "white",
                             }}
@@ -150,7 +152,14 @@ const QuizBuilder = () => {
                 </div>
             ))}
 
-            <div style={{ marginTop: "20px" }}>
+            <div
+                style={{
+                    marginTop: "20px",
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "10px",
+                }}
+            >
                 <button
                     onClick={addQuestion}
                     style={{
@@ -166,7 +175,6 @@ const QuizBuilder = () => {
                 <button
                     onClick={handleSave}
                     style={{
-                        marginLeft: "10px",
                         padding: "10px 15px",
                         borderRadius: "4px",
                         border: "none",
@@ -179,7 +187,6 @@ const QuizBuilder = () => {
             </div>
         </div>
     );
-
 };
 
 export default QuizBuilder;

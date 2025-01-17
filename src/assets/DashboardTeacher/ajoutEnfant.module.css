@@ -47,6 +47,22 @@
     margin-top: 5px;
 }
 
+.logoutWrapper1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 280px;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.logoutIcon1 {
+    width: 31px;
+    aspect-ratio: 1;
+}
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -135,7 +151,7 @@
     color: rgba(95, 95, 110, 1);
     font-size: 16px;
     line-height: 1;
-    margin-right: 630px;
+    margin-right: 730px;
     margin-bottom: 10px;
 }
 
@@ -146,8 +162,8 @@
 .textInput {
     border-radius: 15px;
     background-color: rgba(194, 198, 210, 1);
-    width: 60%;
-    height: 58px;
+    width: 73%;
+    height: 53px;
     border: none;
     padding: 0px 20px;
 }
@@ -157,7 +173,7 @@
     border-radius: 15px;
     background-color: rgba(194, 198, 210, 1);
     width: 64%;
-    height: 58px;
+    height: 38px;
     padding: 8px 57px;
     border: none;
     font-size: 16px;
@@ -185,7 +201,12 @@
     cursor: pointer;
 }
 
-
+@media (max-width: 1180px) {
+    .mainContent {
+        width: 80%;
+        height: 90vh;
+    }
+}
 
 @media (max-width: 1291px) {
     .inputLabel {
@@ -245,6 +266,10 @@
         width: 76%;
     }
 
+    .logoutWrapper1 {
+        margin-top: 700px;
+    }
+
 }
 
 /* Responsivité pour les petits écrans (<768px) */
@@ -283,7 +308,7 @@
     }
 
     .selectInput {
-        width: 96%;
+        width: 70%;
     }
 
     .buttonGroup {
@@ -296,5 +321,7 @@
         width: 70%;
         /* Boutons sur toute la largeur */
     }
+
+
 
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, useNavigate } from "react-router-dom"; // Import de useNavigate
 import styles from './ListeDeClasse.module.css';
 import image from './Group 237658.png';
@@ -23,12 +23,12 @@ const levels = [
     { id: 5, src: "https://cdn.builder.io/api/v1/image/assets/TEMP/9f818958868966380347da4c304f497ea4144b0aa12718da38e30b9c9e4a1f1a?placeholderIfAbsent=true&apiKey=875c657f39b24f02b57f3f224a6dff5b" },
 ];
 
+
 function ListeClasses() {
     const { className } = useParams(); // Récupérer le nom de la classe
     const navigate = useNavigate(); // Initialiser le hook useNavigate
-    console.log("Paramètre className:", className);
-
-    const subjects = classDetailsData[className] || []; // Détails de la classe
+    const [showAlert, setShowAlert] = useState(false);
+    const [inputValue, setInputValue] = useState("");
 
     const handleShare = () => {
         if (navigator.share) {
@@ -41,6 +41,21 @@ function ListeClasses() {
 
     const handleDelete = (matricule) => {
         alert(`Supprimé l'élève avec le matricule : ${matricule}`);
+    };
+
+    const handleAlertClick = () => {
+        setShowAlert(true);
+    };
+
+    const handleAlertSubmit = () => {
+        alert(`Valeur saisie : ${inputValue}`);
+        setShowAlert(false);
+        setInputValue("");
+    };
+
+    const handleAlertCancel = () => {
+        setShowAlert(false);
+        setInputValue("");
     };
 
     return (
@@ -57,6 +72,10 @@ function ListeClasses() {
                     <nav className={styles.navigation}>
                         <button className={styles.navButton}>Classes</button>
                     </nav>
+                    <div className={styles.logoutWrapper1}>
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f40b0737096ea942cae585838c8391211c10fd76ca8769a843e190a644c18cb4?placeholderIfAbsent=true&apiKey=7ac1e9db73ba42ec81c04ec38ddf53cb" alt="Logout icon" className={styles.logoutIcon1} />
+                        <span tabIndex="0" role="button" className={styles.logoutText1}>Log out</span>
+                    </div>
                 </div>
                 <main className={styles.mainContent}>
                     <div className={styles.header}>
@@ -75,14 +94,6 @@ function ListeClasses() {
                     <div className={styles.boutons}>
                         <button
                             className={styles.shareLink}
-                            onClick={handleShare}
-                            aria-label="Share this page"
-                            tabIndex={0}
-                        >
-                            Partager Lien
-                        </button>
-                        <button
-                            className={styles.shareLink}
                             onClick={() => navigate("/ajouter-enfant")}
                             aria-label="Ajouter Enfant"
                         >
@@ -90,6 +101,12 @@ function ListeClasses() {
                         </button>
                         <button className={styles.shareLink} type="button" aria-label="Access Course" onClick={() => navigate("/cours")}>
                             Cours
+                        </button>
+                        <button
+                            className={styles.shareLink}
+                            onClick={handleAlertClick}
+                        >
+                            Partager Lien
                         </button>
                     </div>
                     <div className={styles.container2}>
@@ -126,6 +143,49 @@ function ListeClasses() {
                             </tbody>
                         </table>
                     </div>
+                    {showAlert && (
+                        <div style={{
+                            position: "fixed",
+                            top: "50%",
+                            left: "50%",
+                            transform: "translate(-50%, -50%)",
+                            background: "#fff",
+                            padding: "50px",
+                            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                            borderRadius: "10px",
+                            zIndex: 1000,
+                        }}>
+                            <button
+                                onClick={handleAlertCancel}
+                                style={{
+                                    position: "absolute",
+                                    top: "10px",
+                                    right: "10px",
+                                    background: "transparent",
+                                    border: "none",
+                                    fontSize: "20px",
+                                    cursor: "pointer",
+                                    color: "#888",
+                                }}
+                            >
+                                X
+                            </button>
+                            <h3>Voici la matricule</h3>
+                            <input
+                                type="text"
+                                value={inputValue}
+                                onChange={(e) => setInputValue(e.target.value)}
+                                style={{
+                                    width: "100%",
+                                    padding: "10px",
+                                    marginBottom: "10px",
+                                    border: "1px solid #ddd",
+                                    borderRadius: "5px",
+                                }}
+                            />
+                        </div>
+                    )}
+
                 </main>
             </div>
         </div>

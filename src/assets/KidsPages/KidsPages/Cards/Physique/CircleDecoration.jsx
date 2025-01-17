@@ -1,10 +1,10 @@
 import React from 'react';
-import  './phy.css';
+import styles from './phy.module.css';  // Assurez-vous que le fichier CSS est un module
 
 const CircleDecoration = ({ size }) => {
   return (
-    <div 
-      className="circleDecorPhy" 
+    <div
+      className={styles.circleDecorPhy}  // Utilisation de la classe via styles
       style={{ width: size.width, height: size.height }}
       role="presentation1"
     />

@@ -1,18 +1,18 @@
 import React from 'react';
 import { Circle } from './Circle';
-import  './test.css';
+import styles from './test.module.css';
 
-export function CircleIndicator() {
+export function CircleIndicator({ onClick }) {
   return (
-    <div className="container">
-      <div className="indicatorWrapper">
-        <div className="circleGroup">
+    <div className={styles.container} onClick={onClick}>
+      <div className={styles.indicatorWrapper}>
+        <div className={styles.circleGroup}>
           <Circle size="small" />
           <Circle size="medium" />
         </div>
-        <div className="numberWrapper">
+        <div className={styles.numberWrapper}>
           <Circle size="large" />
-          <div className="number">1</div>
+          <div className={styles.number}>1</div>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import  './gallery.css';
+import styles from './gallery.module.css';
 
 export const GalleryImage = ({ src }) => {
   return (
@@ -7,7 +7,7 @@ export const GalleryImage = ({ src }) => {
       loading="lazy"
       src={src}
       alt=""
-      className="galleryImage"
+      className={styles.galleryImage}
       role="img"
       aria-label="Gallery item"
     />

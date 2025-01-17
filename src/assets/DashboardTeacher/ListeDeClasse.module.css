@@ -47,6 +47,22 @@
     margin-top: 5px;
 }
 
+.logoutWrapper1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 500px;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.logoutIcon1 {
+    width: 31px;
+    aspect-ratio: 1;
+}
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -122,6 +138,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
+    margin-bottom: -100px;
 }
 
 .shareLink {
@@ -150,20 +167,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    /* Hauteur de l'écran */
     width: 100%;
-    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    padding: 10px;
+    /* Ajoute un padding pour éviter que le contenu touche les bords */
+    box-sizing: border-box;
+    /* Inclut le padding dans la largeur */
 }
 
 .studentTable {
-    display: block;
-    overflow-x: auto;
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    /* Ajuste la largeur à 90% pour les écrans plus petits */
+    max-width: 1200px;
+    /* Limite la largeur sur les écrans larges */
     border-collapse: collapse;
-    margin-top: 50px;
-    margin-bottom: 80px;
+    margin: 0 auto;
 }
 
 .tableHeader .headerCell,
@@ -224,6 +245,13 @@ button:hover {
     background-color: rgb(24, 116, 62);
 }
 
+@media (max-width: 1180px) {
+    .mainContent {
+        width: 80%;
+        height: auto;
+    }
+}
+
 /* Responsivité pour les écrans moyens (Tablettes et petites résolutions) */
 @media (max-width: 991px) {
     .headerCell {
@@ -259,6 +287,7 @@ button:hover {
     .mainContent {
         width: 75%;
         margin-left: -20px;
+        height: 90vh;
     }
 
     .searchBox {
@@ -267,6 +296,16 @@ button:hover {
 
     .title {
         margin-top: 40px;
+    }
+
+    .logoutWrapper1 {
+        margin-top: 600px;
+    }
+
+    .studentTable {
+        width: 100%;
+        /* Prend toute la largeur pour les petits écrans */
+        margin-top: -500px;
     }
 }
 
@@ -286,8 +325,8 @@ button:hover {
     }
 
     .mainContent {
-        width: 100%;
-        padding: 10px;
+        width: 90%;
+
     }
 
     .header {
@@ -304,5 +343,23 @@ button:hover {
     .shareLink {
         width: 80%;
         margin-bottom: 15px;
+    }
+
+    .studentTable {
+        width: 100%;
+        /* Prend toute la largeur pour les petits écrans */
+        margin-top: -900px;
+    }
+
+    .tableHeader .headerCell,
+    .studentRow .studentCell {
+        font-size: 12px;
+        /* Réduit davantage la taille de la police */
+        padding: 6px 10px;
+    }
+
+    .levelIcons {
+        gap: 5px;
+        /* Réduit l'espacement entre les icônes */
     }
 }

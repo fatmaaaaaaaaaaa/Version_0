@@ -1,14 +1,12 @@
 import React from 'react'
 import './welcome.css'
-import frontground from './frontground.png'
-
 const Welcome = () => {
+  const handleJoinNow = () => {
+    window.location.href = "/WhoAreYou";
+  };
   return (
     <div className="main">
       <div class="container">
-        <div className="background-photo">
-          <img src={frontground} alt="Image 1" className="foreground-photo" />
-        </div>
         <div className='page-container'>
           <div className="div6">
             <div className="column">
@@ -22,8 +20,8 @@ const Welcome = () => {
                     Hello everyone sci-kids is a platform that offers several services dedicated to children
                   </div>
                   <div className='buttons-container'>
-                    <div className="joinNow"><button className='join'>Join now</button></div>
-                    <div className="joinNow"><button className='partner'>Becom a partner</button></div>
+                    <div className="joinNow"><button className='join' onClick={handleJoinNow}>Join now</button></div>
+                    <div className="joinNow"><button className='partner'>Become a partner</button></div>
                   </div>
                 </div>
               </div>

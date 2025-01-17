@@ -1,4 +1,11 @@
 /* Styles généraux */
+.main2 {
+    margin-top: 50px;
+    height: 350px;
+    position: relative;
+    /* Permet de positionner les étoiles par rapport à ce conteneur */
+}
+
 .Text h1 {
     flex-grow: 1;
     flex-basis: auto;
@@ -7,48 +14,54 @@
     font: 800 48px 'righteous';
     -webkit-text-stroke: 100% #C8F9DD;
     text-shadow:
-      3px 3px 0 #C8F9DD,
-      -3px -3px 0 #C8F9DD,
-      4px -4px 0 #C8F9DD,
-      -4px 4px 0 #C8F9DD,
-      4px 4px 4px #C8F9DD,
-      -4px 4px 4px #C8F9DD,
-      0 2px 0 #C8F9DD,
-      0 -2px 0 #C8F9DD;
+        3px 3px 0 #C8F9DD,
+        -3px -3px 0 #C8F9DD,
+        4px -4px 0 #C8F9DD,
+        -4px 4px 0 #C8F9DD,
+        4px 4px 4px #C8F9DD,
+        -4px 4px 4px #C8F9DD,
+        0 2px 0 #C8F9DD,
+        0 -2px 0 #C8F9DD;
     text-align: center;
     margin-top: 25px;
 }
 
 /* Style pour les étoiles */
-.etoile1, .etoile2, .etoile3, .etoile4 {
+.etoile1,
+.etoile2,
+.etoile3,
+.etoile4 {
     aspect-ratio: 1.05;
     object-fit: contain;
     object-position: center;
     width: 79px;
+    position: absolute;
+    /* Permet de positionner précisément les étoiles */
 }
 
 /* Etoile 1 */
 .etoile1 {
-    margin-top: 9px;
-    margin-left: 20px;
+    top: 0%;
+    /* Position relative au conteneur parent */
+    left: 5%;
 }
 
 /* Etoile 2 */
 .etoile2 {
-    margin-left: 1300px;
+    top: 0%;
+    right: 5%;
 }
 
 /* Etoile 3 */
 .etoile3 {
-    margin-top: 80px;
-    margin-bottom: 200px;
-    margin-left: 20px;
+    bottom: 0%;
+    left: 10%;
 }
 
 /* Etoile 4 */
 .etoile4 {
-    margin-left: 1300px;
-    margin-bottom: 200px;
+    bottom: 0%;
+    right: 10%;
 }
 
 /* Conteneur de la div principale */
@@ -73,54 +86,112 @@
     text-align: center;
 }
 
-/* Media Queries */
-@media screen and (max-width: 1024px) {
-    /* Pour les tablettes */
+/* Styles responsives */
+@media screen and (max-width: 1200px) {
+    .main2 {
+        height: auto;
+    }
+
     .Text h1 {
-        font-size: 36px; /* Réduire la taille du texte */
-        margin-top: 20px;
+        margin-top: -90px;
+        font-size: 36px;
+        /* Réduction de la taille du texte */
     }
 
-    .etoile1, .etoile2, .etoile3, .etoile4 {
-        width: 60px; /* Réduire la taille des étoiles */
+    .etoile1 {
+        top: -70%;
+        left: 7%;
     }
 
-    .div15 {
-        height: auto; /* Ajuster la hauteur de la div */
+    .etoile2 {
+        top: -70%;
+        right: 7%;
     }
 
-    .paragraphe {
-        font-size: 16px; /* Ajuster la taille du texte dans le paragraphe */
+    .etoile3 {
+        bottom: -50%;
+        left: 5%;
     }
 
-    .etoile2, .etoile4 {
-        margin-left: 0; /* Aligner les étoiles au centre */
+    .etoile4 {
+        bottom: -50%;
+        right: 5%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    /* Pour les mobiles */
     .Text h1 {
-        font-size: 28px; /* Réduire encore la taille du texte */
-        margin-top: 10px;
-    }
-
-    .etoile1, .etoile2, .etoile3, .etoile4 {
-        width: 50px; /* Réduire la taille des étoiles */
-    }
-
-    .div15 {
-        flex-direction: column; /* Passer les éléments en colonne */
-        height: auto; /* Ajuster la hauteur */
+        font-size: 28px;
     }
 
     .paragraphe {
-        font-size: 14px; /* Ajuster la taille du texte dans le paragraphe */
+        font-size: 16px;
+        /* Réduire légèrement la taille de police */
+        margin: 10px 15px;
+        /* Ajuster les marges */
+        line-height: 1.5;
+        /* Légèrement plus compact */
     }
 
-    .etoile2, .etoile4 {
-        margin-left: 0;
-        margin-top: 10px;
-        margin-bottom: 10px;
+    .etoile1 {
+        top: 20%;
+        left: 10%;
+    }
+
+    .etoile2 {
+        top: 20%;
+        right: 10%;
+    }
+
+    .etoile3 {
+        bottom: -20%;
+        left: 15%;
+    }
+
+    .etoile4 {
+        bottom: 20%;
+        right: 15%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Text h1 {
+        font-size: 22px;
+    }
+
+    .paragraphe {
+        font-size: 14px;
+        /* Plus petit pour les petits écrans */
+        margin: 10px 10px;
+        /* Réduction des marges */
+        text-align: justify;
+        /* Justification du texte pour un affichage plus soigné */
+    }
+
+    span {
+        font-size: 12px;
+        /* Plus petite taille pour les écrans étroits */
+        padding: 3px 6px;
+        margin: 3px;
+    }
+
+    .etoile1 {
+        top: 25%;
+        left: 15%;
+    }
+
+    .etoile2 {
+        top: 25%;
+        right: 15%;
+    }
+
+    .etoile3 {
+        bottom: 25%;
+        left: 20%;
+    }
+
+    .etoile4 {
+        bottom: 25%;
+        right: 20%;
     }
 }

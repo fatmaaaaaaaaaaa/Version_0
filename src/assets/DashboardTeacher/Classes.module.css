@@ -47,6 +47,22 @@
     margin-top: 5px;
 }
 
+.logoutWrapper1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 280px;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.logoutIcon1 {
+    width: 31px;
+    aspect-ratio: 1;
+}
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -165,6 +181,11 @@
         margin-top: 40px;
         width: 97%;
     }
+
+    .mainContent {
+        width: 80%;
+        height: auto;
+    }
 }
 
 /* Responsivité pour les Tablettes (768px - 991px) */
@@ -207,6 +228,10 @@
         width: 100%;
         margin-top: 35px;
         margin-left: 0;
+    }
+
+    .logoutWrapper1 {
+        margin-top: 700px;
     }
 }
 

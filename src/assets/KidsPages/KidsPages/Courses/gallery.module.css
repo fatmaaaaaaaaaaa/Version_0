@@ -1,0 +1,24 @@
+.global {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star {
+    width: 50px;
+    margin-right: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.star:last-child {
+    margin-right: 0;
+    /* Pas de marge après la dernière étoile */
+}
+
+.active {
+    opacity: 1;
+}
+
+.inactive {
+    opacity: 0.4;
+}

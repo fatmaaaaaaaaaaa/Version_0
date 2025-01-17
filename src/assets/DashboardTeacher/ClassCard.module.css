@@ -69,6 +69,7 @@
     align-self: stretch;
 }
 
+
 @media (max-width: 1180px) {
     .card {
         width: 85%;

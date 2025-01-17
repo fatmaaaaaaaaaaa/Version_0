@@ -47,6 +47,22 @@
     margin-top: 5px;
 }
 
+.logoutWrapper1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 280px;
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.logoutIcon1 {
+    width: 31px;
+    aspect-ratio: 1;
+}
+
 .navigation {
     display: flex;
     flex-direction: column;
@@ -146,6 +162,13 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+@media (max-width: 1180px) {
+    .mainContent {
+        width: 80%;
+        height: auto;
+    }
 }
 
 /* Responsive pour les tablettes */

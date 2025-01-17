@@ -87,6 +87,10 @@
     padding: 20px 10px 10px;
 }
 
+.main2 {
+    height: 500px;
+}
+
 .header {
     display: flex;
     width: 954px;
@@ -148,8 +152,8 @@
     background-color: #4AA3DF;
     color: #fff;
     margin-top: 10px;
-    left: 50%;
-    margin-bottom: 280px;
+    right: 90%;
+    margin-bottom: -160px;
 }
 
 .addQuizButton:hover {
@@ -160,7 +164,7 @@
 @media (max-width: 1180px) {
     .mainContent {
         width: 80%;
-        height: 90vh;
+        height: auto;
     }
 }
 
@@ -189,9 +193,7 @@
         margin-top: 40px;
     }
 
-    .logoutWrapper1 {
-        margin-top: 650px;
-    }
+
 }
 
 @media (max-width: 768px) {

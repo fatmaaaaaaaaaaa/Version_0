@@ -1,3 +1,69 @@
-.sdgs{
+.sdgs {
     height: 200vh;
 }
+
+/* ---- Styles généraux pour tous les écrans ---- */
+.Contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* ---- Responsivité pour les téléphones (jusqu'à 768px) ---- */
+@media (max-width: 768px) {
+    .Contain {
+        padding: 10px;
+    }
+
+    .sdgs,
+    .Classes,
+    .Gallery,
+    .GetInTouch,
+    .Footer {
+        padding: 15px;
+    }
+
+    /* Ajustement des composants individuels */
+    .Welcome,
+    .Discover,
+    .Partners,
+    .ClientsSection {
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* ---- Responsivité pour les tablettes (769px à 1024px) ---- */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Contain {
+        padding: 20px;
+    }
+
+    .sdgs {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* ---- Responsivité pour les grands écrans (plus de 1024px) ---- */

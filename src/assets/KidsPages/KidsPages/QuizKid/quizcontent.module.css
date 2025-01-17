@@ -1,0 +1,56 @@
+.quizContainer {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 9px;
+    width: 393px;
+}
+
+.taskItem {
+    margin-bottom: 10px;
+}
+
+.subtaskItem {
+    margin-left: 20px;
+}
+
+@media (max-width: 1180px) {
+
+    /* Tablettes */
+    .quizContainer {
+        width: 373px;
+        /* Prend la majorité de l'espace */
+        padding: 9px;
+        /* Ajuste les marges */
+        margin-left: 10px;
+    }
+
+    .taskItem {
+        margin-bottom: 15px;
+        /* Augmente l'espacement pour améliorer la lisibilité */
+    }
+
+    .subtaskItem {
+        margin-left: 10px;
+        /* Réduit l'indentation pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Mobiles */
+    .quizContainer {
+        width: 100%;
+        /* Utilise toute la largeur disponible */
+        padding: 10px 5px;
+        /* Réduit les marges */
+    }
+
+    .taskItem {
+        margin-bottom: 12px;
+        /* Ajuste légèrement l'espacement */
+    }
+
+    .subtaskItem {
+        margin-left: 5px;
+        /* Réduit encore l'indentation */
+    }
+}

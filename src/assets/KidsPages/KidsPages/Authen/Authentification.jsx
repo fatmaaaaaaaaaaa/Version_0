@@ -1,46 +1,23 @@
 import React from 'react';
-import "./loginpage.css";
-import Kid from './Kid.png'
-import School from './School.png'
+import styles from './loginpage.module.css'; // Importing CSS as a module
+import Kid from './Kid.png';
+import School from './School.png';
 
 const LoginPage = () => {
-  /* const [matricule, setMatricule] = useState('');
-  
-    const handleCheck = async () => {
-      if (!matricule.trim()) {
-        alert('Veuillez entrer une matricule.');
-        return;
-      }
-  
-      try {
-        const res = await axios.post('http://localhost:5000/api/check-matricule', { matricule });
-  
-        if (res.data.exists) {
-          navigate("/save-name");
-        } else {
-          alert('Matricule n\'existe pas.');
-        }
-      } catch (error) {
-        alert(
-          error.response
-            ? error.response.data.message
-            : 'Erreur de connexion au serveur. Veuillez réessayer.'
-        );
-      }
-    };
-    const navigate = useNavigate();*/
-
+  const handleJoinNow = () => {
+    window.location.href = "/save-name";
+  };
 
   return (
-    <div className="login">
-      <div className="background1">
-        <img src={School} alt="School" className="school-image1" />
-        <img src={Kid} alt="Character" className="character-image1" />
+    <div className={styles.login}>
+      <div className={styles.background1}>
+        <img src={School} alt="School" className={styles.schoolImage1} />
+        <img src={Kid} alt="Character" className={styles.characterImage1} />
       </div>
-      <div className="login-card1">
-        <label htmlFor="matricule" className="matricule-label1">Matricule:</label>
-        <input type="text" id="matricule" className="matricule-input1" />
-        <button className="login-button1" >LOGIN</button>
+      <div className={styles.loginCard1}>
+        <label htmlFor="matricule" className={styles.matriculeLabel1}>Matricule:</label>
+        <input type="text" id="matricule" className={styles.matriculeInput1} />
+        <button className={styles.loginButton1} onClick={handleJoinNow}>LOGIN</button>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import CircleDecoration from './CircleDecoration';
-import './phy.css';
-import physic from './phys.png'
+import styles from './phy.module.css';  // Assurez-vous que le fichier CSS est un module
+import physic from './phys.png';
 
 const decorations = [
   { width: '18px', height: '13px' },
@@ -16,31 +16,29 @@ const decorations = [
 
 const MathTopic = () => {
   return (
-    <div className="topicContainerPhy">
-      <div className="mainCardPhy">
-        <div className="decorationGroupPhy">
+    <div className={styles.topicContainerPhy}>
+      <div className={styles.mainCardPhy}>
+        <div className={styles.decorationGroupPhy}>
           <CircleDecoration size={decorations[0]} />
-          <div className="decorationSubGroupPhy">
+          <div className={styles.decorationSubGroupPhy}>
             <CircleDecoration size={decorations[1]} />
             <CircleDecoration size={decorations[2]} />
           </div>
         </div>
-        <div className="contentWrapperPhy">
-          <h2 className="topicTitlePhy">physical</h2>
-
-          
-          <div className="decorationWrapperPhy">
+        <div className={styles.contentWrapperPhy}>
+          <h2 className={styles.topicTitlePhy}>physical</h2>
+          <div className={styles.decorationWrapperPhy}>
             <CircleDecoration size={decorations[3]} />
             <CircleDecoration size={decorations[4]} />
-            <div className='photoPhy'><img  src={physic} alt='physic' /> </div>
+            <div className={styles.photoPhy}><img src={physic} alt='physic' /> </div>
           </div>
         </div>
       </div>
-      <div className="scoreCardPhy">
+      <div className={styles.scoreCardPhy}>
         <CircleDecoration size={decorations[5]} />
-        <div className="scoreWrapperPhy">
-          <div className="scoreContentPhy">
-            <span className="scoreValuePhy">18</span>
+        <div className={styles.scoreWrapperPhy}>
+          <div className={styles.scoreContentPhy}>
+            <span className={styles.scoreValuePhy}>18</span>
             <CircleDecoration size={decorations[6]} />
           </div>
           <CircleDecoration size={decorations[7]} />

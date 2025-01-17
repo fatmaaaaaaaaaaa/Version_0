@@ -1,11 +1,11 @@
 import React from 'react';
-import  './test.css';
+import styles from './test.module.css';
 
 export function Circle({ size }) {
   const sizeClasses = {
-    small: "smallCircle",
-    medium: "mediumCircle",
-    large: "largeCircle"
+    small: styles.smallCircle,
+    medium: styles.mediumCircle,
+    large: styles.largeCircle
   };
 
   return <div className={sizeClasses[size]} />;

@@ -1,10 +1,10 @@
 import React from 'react';
-import  './english.css';
+import styles from './english.module.css';
 
 const CircleDecoration = ({ size }) => {
   return (
-    <div 
-      className="circleDecor3" 
+    <div
+      className={styles.circleDecor3}
       style={{ width: size.width, height: size.height }}
       role="presentation3"
     />

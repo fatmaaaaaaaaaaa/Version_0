@@ -1,0 +1,99 @@
+:root {
+    --primary-color: rgba(87, 209, 202, 1);
+    --secondary-color: rgba(115, 219, 213, 1);
+    --shadow-color: rgba(238, 238, 238, 1);
+    --text-color: rgba(0, 0, 0, 1);
+    --font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+    margin: 0 auto;
+    margin-left: 180px;
+
+}
+
+.indicatorWrapper {
+    border-radius: 13px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 4px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 53%;
+    margin-top: -30px;
+    padding-bottom: 35px;
+    height: 80px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.indicatorWrapper:hover {
+    transform: scale(1.05);
+
+}
+
+.circleGroup {
+    display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+}
+
+.smallCircle,
+.mediumCircle,
+.largeCircle {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.smallCircle {
+    width: 11px;
+    height: 11px;
+}
+
+.mediumCircle {
+    width: 51px;
+    height: 27px;
+}
+
+.numberWrapper {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    color: var(--text-color);
+    font: 700 70px var(--font-family);
+    margin-top: -30px;
+}
+
+.largeCircle {
+    width: 108px;
+    height: 87px;
+}
+
+.number {
+    z-index: 10;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+}
+
+@media (max-width: 820px) {
+    .container {
+        max-width: 640px;
+    }
+
+    .indicatorWrapper {
+        width: 1950px;
+        height: 150px;
+        margin-left: 322px;
+    }
+}

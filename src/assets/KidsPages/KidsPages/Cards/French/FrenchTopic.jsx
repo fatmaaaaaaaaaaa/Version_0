@@ -1,6 +1,6 @@
 import React from 'react';
 import CircleDecoration from './CircleDecoration';
-import './french.css';
+import styles from './french.module.css';
 import french from './french.png';
 
 const decorations = [
@@ -16,29 +16,29 @@ const decorations = [
 
 const MathTopic = () => {
   return (
-    <div className="topicContainer2">
-      <div className="mainCard2">
-        <div className="decorationGroup2">
+    <div className={styles.topicContainer2}>
+      <div className={styles.mainCard2}>
+        <div className={styles.decorationGroup2}>
           <CircleDecoration size={decorations[0]} />
-          <div className="decorationSubGroup2">
+          <div className={styles.decorationSubGroup2}>
             <CircleDecoration size={decorations[1]} />
             <CircleDecoration size={decorations[2]} />
           </div>
         </div>
-        <div className="contentWrapper2">
-          <h2 className="topicTitle2">French</h2>
-          <div className="decorationWrapper2">
+        <div className={styles.contentWrapper2}>
+          <h2 className={styles.topicTitle2}>French</h2>
+          <div className={styles.decorationWrapper2}>
             <CircleDecoration size={decorations[3]} />
             <CircleDecoration size={decorations[4]} />
-                        <div className='photo2'><img  src={french} alt='french' /> </div>
+            <div className={styles.photo2}><img src={french} alt='french' /></div>
           </div>
         </div>
       </div>
-      <div className="scoreCard2">
+      <div className={styles.scoreCard2}>
         <CircleDecoration size={decorations[5]} />
-        <div className="scoreWrapper2">
-          <div className="scoreContent2">
-            <span className="scoreValue2">20</span>
+        <div className={styles.scoreWrapper2}>
+          <div className={styles.scoreContent2}>
+            <span className={styles.scoreValue2}>20</span>
             <CircleDecoration size={decorations[6]} />
           </div>
           <CircleDecoration size={decorations[7]} />
